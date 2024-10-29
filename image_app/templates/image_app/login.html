@@ -1,0 +1,19 @@
+{% extends 'image_app/base.html' %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-semibold mb-6">Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-4">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="border rounded px-2 py-1 w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="border rounded px-2 py-1 w-full" required>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
+    </form>
+</div>
+{% endblock %}
